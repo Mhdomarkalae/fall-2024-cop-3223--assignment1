@@ -1,3 +1,5 @@
+// MHD OMAR KALAE
+//UCFID 5626954
 #include <stdio.h>
 #define PI 3.14159
 #include <math.h>
@@ -80,7 +82,8 @@ double calculateHeight(){
     
     //fromula for height
     double diameter= calculateDistance();
-    double height= diameter*2;
+    double calc= diameter/2;
+    double height= calc*2;
      
     
     printf("The height of the city encompassed by your request is %lf ", height);
