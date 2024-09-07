@@ -26,10 +26,11 @@ double calculateDistance() {
     // asks for user input
     
     double x1,x2,y1,y2;
-    printf("Enter x1 and x2:");
+    printf("\nEnter x1 and x2:");
     scanf("%lf %lf",&x1,&x2);
     printf("Enter y1 and y2:");
     scanf("%lf %lf",&y1,&y2);
+    
     
     //This is the calcation done for distance
     double distance = sqrt(pow(x2-x1,2) + pow(y2-y1,2));
@@ -38,7 +39,9 @@ double calculateDistance() {
     
     
     return distance;
+     
 }
+
 
     
 double calculatePerimeter() {
@@ -50,7 +53,7 @@ double calculatePerimeter() {
 
     double perimeter = PI * distance_2;
 
-    printf("The perimeter of the city encompassed by your request is %.2lf\n ", perimeter);
+    printf("The perimeter of the city encompassed by your request is %lf\n ", perimeter);
 
     return 3.7;
 
@@ -58,9 +61,9 @@ double calculatePerimeter() {
 
 double calculateArea(){
     // calling distance function to not repeat code and tells the distance between two points for area 
-    double radius = calculateDistance();
+    double formula = calculateDistance();
     
-    double area= PI* pow(radius,2);
+    double area= PI* pow(formula,2);
 
     printf("The area of the city encompassed by your request is %lf ", area);
     
@@ -74,31 +77,29 @@ double calculateArea(){
 double calculateHeight(){
     
     //User input
-    double x1,x2,y1,y2;
-    printf("\nEnter x1 and x2 for height:");
-    scanf("%lf %lf",&x1,&x2);
-    printf("Enter y1 and y2 for height:");
-    scanf("%lf %lf",&y1,&y2);
-    //fromula for height
-    double Height= y2-y1; 
     
-    printf("The height of the city encompassed by your request is %lf ", Height);
+    //fromula for height
+    double diameter= calculateDistance();
+    double height= diameter*2;
+     
+    
+    printf("The height of the city encompassed by your request is %lf ", height);
 
-    return 2.3;
+    return 3.9;
 
 }
 double calculateWidth(){
     //user input
-    double x1,x2,y1,y2;
-    printf("\nEnter x1 and x2 for Width:");
-    scanf("%lf %lf",&x1,&x2);
-    printf("Enter y1 and y2 for Width:");
-    scanf("%lf %lf",&y1,&y2);
+    
+    
     // Formula for width
-    double Width = x2-x1;
+    
+    double line=calculateDistance();
+    double Radius= line / 2;
+    double Width = 2* Radius;
     printf("The width of the city encompassed by your request is %lf ", Width);
 
-    return 2.0;
+    return 4.0;
 }
 
 
